@@ -9,62 +9,92 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "NeuroSync AI Platform",
+      title: "Souqna Platform",
       description: "Advanced AI-powered analytics platform for healthcare data processing and predictive modeling.",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop",
-      category: "ai",
-      technologies: ["React", "Python", "TensorFlow", "AWS"],
-      liveUrl: "#",
-      githubUrl: "#"
+      image: "/images/souqna.jpg",
+      category: "web",
+      technologies: ["TypeScript", "Next.js", "Tailwind CSS", "Nest js"],
+      liveUrl: "https://souqna-shop.com/",
+      githubUrl: "https://github.com/The-5-Dimension/souqna-project-frontend"
     },
     {
       id: 2,
-      title: "CloudVault Enterprise",
-      description: "Secure cloud storage solution with end-to-end encryption and collaborative features.",
-      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop",
+      title: "Maladvisory Platform",
+      description: "We are a platform that connects clients seeking accurate financial advice with financial experts eager to share their expertise. Our goal is to make financial decisions clearer and easier for everyone",
+      image: "/images/Maladvisory.png",
       category: "web",
-      technologies: ["Next.js", "Node.js", "MongoDB", "Docker"],
-      liveUrl: "#",
-      githubUrl: "#"
+      technologies: ["TypeScript", "Next.js", "Tailwind CSS", "Nest js"],
+      liveUrl: "https://maladvisory.com/",
+      githubUrl: "https://github.com/The-5-Dimension/mal-advisory-project-frontend"
     },
     {
       id: 3,
-      title: "MindfulMoments Mobile",
+      title: "Shipping System",
       description: "Meditation and mindfulness app with AI-powered personalized recommendations.",
-      image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&h=400&fit=crop",
-      category: "mobile",
+      image: "/images/shipping.png",
+      category: "web",
       technologies: ["React Native", "Firebase", "ML Kit", "Node.js"],
-      liveUrl: "#",
-      githubUrl: "#"
+      liveUrl: "https://mylexpress.com/",
+      githubUrl: "https://github.com/The-5-Dimension/Shipping_System_Frontend"
     },
     {
       id: 4,
-      title: "QuantumTrade Analytics",
-      description: "Real-time financial trading platform with advanced algorithmic trading capabilities.",
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop",
-      category: "web",
-      technologies: ["Vue.js", "Python", "Redis", "WebSocket"],
-      liveUrl: "#",
+      title: "Women'sGuide",
+      description: "An informative guide that helps all businesswomen obtain legal information, official procedures, financing services information, and advisory services in project management and training.",
+      image: "/images/womens-guide.jpeg",
+      category: "mobile",
+      technologies: ["Flutter", "laravel", "Angular", "Bootstrap 5", "MySQL"],
+      liveUrl: "https://play.google.com/store/apps/details?id=com.guide.women.gover&pli=1",
       githubUrl: "#"
     },
     {
       id: 5,
-      title: "EcoSmart IoT Hub",
-      description: "IoT platform for smart home automation with energy optimization algorithms.",
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop",
-      category: "ai",
-      technologies: ["React", "IoT Core", "Machine Learning", "Raspberry Pi"],
-      liveUrl: "#",
+      title: "YWBOD",
+      description: "Introductory site for a local organization in Yemen.",
+      image: "/images/YWBOD.jpeg",
+      category: "web",
+      technologies: ["laravel", "Bootstrap 5", "MySQL"],
+      liveUrl: "https://ywbod.org",
       githubUrl: "#"
     },
     {
       id: 6,
-      title: "FlexFit Trainer",
-      description: "Fitness tracking mobile app with AR workout guidance and social features.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
-      category: "mobile",
-      technologies: ["Flutter", "ARCore", "Firebase", "TensorFlow Lite"],
-      liveUrl: "#",
+      title: "Healing",
+      description: "A site to get online psychotherapy by reviewing all therapists and requesting a treatment session.",
+      image: "/images/healing.jpeg",
+      category: "web",
+      technologies: ["Nextjs", "Firebase","Tailwind"],
+      liveUrl: "https://idev-therapist.vercel.app/",
+      githubUrl: "https://github.com/"
+    },
+    {
+      id: 7,
+      title: "ToDos App",
+      description: "a small website to create a new todo with feature of edite this todo and login system using clerk auth",
+      image: "/images/todos.png",
+      category: "web",
+      technologies: ["nextjs", "prisma", "tailwind", "clerk_auth"],
+      liveUrl: "https://haneen-todos-app.vercel.app/",
+      githubUrl: "https://github.com/"
+    },
+    {
+      id: 8,
+      title: "Blue Whale",
+      description: "At bluewhale, we pride ourselves on our dedication to providing top-notch service and support to our clients. Here are a few reasons why you should choose us for your exporting, importing and general services needs",
+      image: "/images/blue-whale.png",
+      category: "web",
+      technologies: ["wordpress"],
+      liveUrl: "https://www.bluewhale8.com",  // <-- غيري الرابط الصحيح
+      githubUrl: "#"
+    },
+    {
+      id: 9,
+      title: "haneen-portfolio",
+      description: "Software Engineer Portfolio showcasing projects, skills, and experience in web development.",
+      image: "/images/haneen-portfolio.png",
+      category: "web",
+      technologies: ["React","Nextjs"],
+      liveUrl: "https://haneen-portfolio.vercel.app/",  // <-- غيري الرابط الصحيح
       githubUrl: "#"
     }
   ];

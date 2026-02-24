@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -5,9 +6,11 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,16 +18,56 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSending(true);
+
+    // 👇 الآن نقرأ البيانات من ملف .env
+    const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
+    const userId = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+
+    // تأكد إن البيانات موجودة
+    if (!serviceId || !templateId || !userId) {
+      toast({
+        title: "❌ خطأ في الإعدادات",
+        description: "الرجاء التأكد من إعدادات البريد الإلكتروني",
+        variant: "destructive",
+      });
+      setIsSending(false);
+      return;
+    }
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      to_email: 'haneenabdualglil@gmail.com',
+      subject: formData.subject,
+      message: formData.message
+    };
+
+    try {
+      await emailjs.send(serviceId, templateId, templateParams, userId);
+      
+      toast({
+        title: "✅ تم الإرسال بنجاح!",
+        description: "شكراً لتواصلك معنا. سنرد عليك في أقرب وقت ممكن.",
+      });
+      
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('فشل الإرسال:', error);
+      toast({
+        title: "❌ فشل الإرسال",
+        description: "حدث خطأ ما. الرجاء المحاولة مرة أخرى",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
+  // باقي الكود كما هو... (كل الدوال والـ JSX)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
@@ -36,26 +79,26 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "contact@the5dimension.com",
-      href: "mailto:contact@the5dimension.com"
+      content: "haneenabdualglil@gmail.com",
+      href: "mailto:haneenabdualglil@gmail.com"
     },
     {
       icon: Phone,
       title: "Call Us",
-      content: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      content: "+967-738034354",
+      href: "tel:+967738034354"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      content: "San Francisco, CA",
+      content: "Taiz, Yemen",
       href: "#"
     }
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/Haneen-Abdulgllil", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/haneen-abdulglil-762601241/", label: "LinkedIn" },
     { icon: Twitter, href: "#", label: "Twitter" }
   ];
 
@@ -96,6 +139,7 @@ const Contact = () => {
                           value={formData.name}
                           onChange={handleChange}
                           required
+                          disabled={isSending}
                           className="glow-border focus:border-primary"
                         />
                       </div>
@@ -110,6 +154,7 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
+                          disabled={isSending}
                           className="glow-border focus:border-primary"
                         />
                       </div>
@@ -125,6 +170,7 @@ const Contact = () => {
                         value={formData.subject}
                         onChange={handleChange}
                         required
+                        disabled={isSending}
                         className="glow-border focus:border-primary"
                       />
                     </div>
@@ -140,12 +186,24 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
+                        disabled={isSending}
                         className="glow-border focus:border-primary resize-none"
                       />
                     </div>
                     
-                    <Button type="submit" size="lg" className="w-full glow-border">
-                      Send Message <Send className="ml-2 h-5 w-5" />
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="w-full glow-border"
+                      disabled={isSending}
+                    >
+                      {isSending ? (
+                        <>جاري الإرسال...</>
+                      ) : (
+                        <>
+                          Send Message <Send className="ml-2 h-5 w-5" />
+                        </>
+                      )}
                     </Button>
                   </form>
                 </CardContent>

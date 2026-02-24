@@ -13,10 +13,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: Github, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'Email', icon: Mail, href: 'mailto:contact@the5dimension.com' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/Haneen-Abdulgllil' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/haneen-abdulglil-762601241/' },
+    { name: 'Twitter', icon: Twitter, href: 'https://www.linkedin.com/in/haneen-abdulglil-762601241/' },
+    { name: 'Email', icon: Mail, href: 'haneenabdualglil@gmail.com' },
   ];
 
   return (

@@ -5,28 +5,28 @@ import { Card, CardContent } from '@/components/ui/card';
 const About = () => {
   const teamMembers = [
     {
-      name: "Alex Chen",
-      position: "Lead Developer & Co-Founder",
+      name: "Hannen Abdulglil",
+      position: "Software Engineer",
       email: "alex@the5dimension.com",
-      linkedin: "https://linkedin.com/in/alexchen",
-      github: "https://github.com/alexchen",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+      linkedin: "https://www.linkedin.com/in/haneen-abdulglil-762601241/",
+      github: "https://github.com/Haneen-Abdulgllil",
+      image: "/images/Hannen.jpeg",
     },
     {
-      name: "Sarah Rodriguez",
-      position: "AI Solutions Architect",
-      email: "sarah@the5dimension.com",
-      linkedin: "https://linkedin.com/in/sarahrodriguez",
-      github: "https://github.com/sarahrodriguez",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b5b2f2a0?w=300&h=300&fit=crop&crop=face"
+      name: "Rasha Soltan",
+      position: "Software Engineer",
+      email: "almekhlafi.rasha@gmail.com",
+      linkedin: "https://www.linkedin.com/in/rasha-almekhlafi-650b6a176/",
+      github: "https://github.com/RashaAlmekhlafi",
+      image: "/images/rasha.jpeg",
     },
     {
-      name: "David Kim",
-      position: "Full-Stack Engineer",
-      email: "david@the5dimension.com",
-      linkedin: "https://linkedin.com/in/davidkim",
-      github: "https://github.com/davidkim",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face"
+      name: "Reem Abdulglil",
+      position: "Software Engineer",
+      email: "rabdu8361@gmail.com",
+      linkedin: "https://www.linkedin.com/in/reem-abdulglil-b5461a258 ",
+      github: "https://github.com/reemabdu",
+      image: "/images/reem2.jpg",
     }
   ];
 
