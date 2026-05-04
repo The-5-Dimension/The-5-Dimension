@@ -36,7 +36,7 @@ const About = () => {
       <section className="py-24 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-            About <span className="gradient-text">The-5-Dimension</span>
+            About <span className="gradient-text">The 5<sup className="gradient-text">th</sup> Dimension</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in">
             We are a cutting-edge programming team dedicated to expanding the boundaries of what's possible in software development.
@@ -51,16 +51,16 @@ const About = () => {
             <div className="animate-slide-in-left">
               <h2 className="text-3xl font-bold mb-6 text-primary">Our Mission</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                To revolutionize the digital landscape by creating innovative software solutions 
-                that transcend traditional boundaries. We believe in pushing the limits of technology 
+                To revolutionize the digital landscape by creating innovative software solutions
+                that transcend traditional boundaries. We believe in pushing the limits of technology
                 to solve complex problems and create extraordinary user experiences.
               </p>
             </div>
             <div className="animate-slide-in-right">
               <h2 className="text-3xl font-bold mb-6 text-secondary">Our Vision</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                A future where technology seamlessly integrates with human needs, creating 
-                solutions that are not just functional, but transformative. We envision a world 
+                A future where technology seamlessly integrates with human needs, creating
+                solutions that are not just functional, but transformative. We envision a world
                 where our multi-dimensional approach to development sets new standards for the industry.
               </p>
             </div>
@@ -114,18 +114,17 @@ const About = () => {
               Meet Our <span className="gradient-text">Team</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The brilliant minds behind The-5-Dimension, each bringing unique expertise 
+              The brilliant minds behind The 5<sup className="gradient-text">th</sup> Dimension, each bringing unique expertise
               to create extraordinary solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
-              <Card key={member.name} className={`group glow-border hover:border-primary/50 transition-all duration-300 ${
-                index === 0 ? 'animate-slide-in-left' : 
-                index === 1 ? 'animate-fade-in animation-delay-200' : 
-                'animate-slide-in-right animation-delay-400'
-              }`}>
+              <Card key={member.name} className={`group glow-border hover:border-primary/50 transition-all duration-300 ${index === 0 ? 'animate-slide-in-left' :
+                  index === 1 ? 'animate-fade-in animation-delay-200' :
+                    'animate-slide-in-right animation-delay-400'
+                }`}>
                 <CardContent className="p-6 text-center">
                   <div className="mb-6">
                     <img
@@ -136,7 +135,7 @@ const About = () => {
                     <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
                     <p className="text-primary font-medium mb-4">{member.position}</p>
                   </div>
-                  
+
                   <div className="flex justify-center space-x-4">
                     <Button variant="outline" size="icon" asChild className="glow-border">
                       <a href={`mailto:${member.email}`} aria-label="Email">

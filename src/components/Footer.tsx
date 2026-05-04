@@ -27,10 +27,10 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Code2 className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold gradient-text">The-5-Dimension</span>
+              <span className="text-xl font-bold gradient-text">The 5<sup className="gradient-text">th</sup> Dimension</span>
             </div>
             <p className="text-muted-foreground max-w-md">
-              Expanding the dimensions of code through innovative software development, 
+              Expanding the dimensions of code through innovative software development,
               cutting-edge web applications, and transformative AI solutions.
             </p>
           </div>
@@ -75,7 +75,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} The-5-Dimension. All rights reserved.
+            © {currentYear} The 5<sup className="gradient-text">th</sup> Dimension. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm mt-2 md:mt-0">
             Expanding the dimensions of code

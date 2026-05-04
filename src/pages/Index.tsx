@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <BackgroundAnimation />
-      
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4">
         <div className="container mx-auto text-center">
@@ -18,16 +18,16 @@ const Index = () => {
                 <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full" />
               </div>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               <span className="gradient-text">The 5<sup className="gradient-text">th</sup> Dimension</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Expanding the dimensions of code through innovative software development, 
+              Expanding the dimensions of code through innovative software development,
               cutting-edge web applications, and transformative AI solutions.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="glow-border">
                 <Link to="/portfolio">
@@ -47,7 +47,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose <span className="gradient-text">The-5-Dimension</span>?
+              Why Choose <span className="gradient-text">The 5<sup className="gradient-text">th</sup> Dimension</span>?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               We push the boundaries of what's possible in software development
