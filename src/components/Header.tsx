@@ -27,7 +27,7 @@ const Header = () => {
               <Code2 className="h-8 w-8 text-primary group-hover:text-secondary transition-colors duration-300" />
               <div className="absolute inset-0 bg-primary/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <span className="text-xl font-bold gradient-text">The-5-Dimension</span>
+            <span className="text-xl font-bold gradient-text">The 5<sup className="gradient-text">th</sup> Dimension</span>
           </Link>
 
           {/* Desktop Navigation */}
