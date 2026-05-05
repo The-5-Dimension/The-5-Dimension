@@ -1,7 +1,7 @@
 // src/components/Footer.tsx
 
 import { Link } from 'react-router-dom';
-import { Code2, Github, Linkedin, Mail, Twitter, ChevronRight, Heart } from 'lucide-react';
+import { Code2, Github, Linkedin, Mail, ChevronRight, Heart, X } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,7 +23,15 @@ const Footer = () => {
   const socialLinks = [
     { name: 'GitHub', icon: Github, href: 'https://github.com/Haneen-Abdulgllil' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/haneen-abdulglil-762601241/' },
-    { name: 'Twitter', icon: Twitter, href: 'https://www.linkedin.com/in/haneen-abdulglil-762601241/' },
+    { 
+      name: 'X', 
+      icon: ({ className }: { className?: string }) => (
+        <svg viewBox="0 0 24 24" aria-hidden="true" className={className} fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+        </svg>
+      ), 
+      href: 'https://x.com/haneen_abdulglil' 
+    },
     { name: 'Email', icon: Mail, href: 'mailto:haneenabdualglil@gmail.com' },
   ];
 
